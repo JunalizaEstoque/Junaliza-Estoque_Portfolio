@@ -114,6 +114,7 @@ body{
 .container2 {
     display: flex;
     flex-direction: column;
+    flex-wrap: wrap;
     flex: 1;
     width: 100%;
     height: 100vh;
@@ -159,51 +160,70 @@ body{
 .container3 {
     display: flex;
     height: 100vh; 
-    overflow: hidden;
     flex: 1;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.container3-3{
+    display: flex;
+    flex-wrap: wrap;
     position: relative;
-}
-
-.container3 .cursive{
-    font-family:Arial, Helvetica, sans-serif;
-    font-size:50px;
-    padding-left: 30px;
-    padding-top: 250px;
-    position: absolute;
-}
-
-.container3 .div4{
-    width: 80%;
+    overflow: hidden;
+    width: 100%;
     height: 100vh;
+}
+
+/* woman */
+.container3 .div4{
+    width: 100%;
+    height: 100%;
+    max-height: 600px;
+    max-width: 500px;
     position: absolute;
     z-index: 5;
     animation-delay: 0.2s;
-    margin-left: 80px;
-    margin-top: 50px;
+    right: 10%;
+    bottom: 0;
 } 
 
+/* gray last triangle */
 .container3 .div5{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    max-height: 700px;
+    max-width: 700px;
     position: absolute;
     z-index: 2;
     animation-delay: -0.1s;
+    right: 0;
+    bottom: 0;
 }
 
+/* second triangle */
 .container3 .div6{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    max-width: 700px;
+    max-height: 700px;
     position: absolute;
     z-index: 3;
     animation-delay: 0.1s;
+    right: 0;
+    bottom: 0;
 }
 
+/* first triangle */
 .container3 .div7{
     width: 100%;
-    height: 100vh;
+    height: 100%;
+    max-width: 700px;
+    max-height: 700px;
     position: absolute;
     z-index: 6;
     animation-delay: 0.2s;
+    right: 0;
+    bottom: 0;
 }
 
 
@@ -220,49 +240,56 @@ body{
     height: 100vh;
     width: 100%;
     background-color: rgb(250, 245, 239);
-    position: relative;
+    /* position: relative; */
 }
 
 .container4 {
+    display: flex;
+    flex-direction: column;
     width: 100%;
     height: 100vh;
     overflow: hidden;
-    position: relative;
     flex: 1;
+}
+
+.container4-4{
+    position: relative;
+    /* overflow: hidden; */
+    width: 500px;
+    height: 500px;
+    background-color: blanchedalmond;
+    bottom: -160px;
 }
 
 
 .container4 .about2{
     width: 100%;
     height: 100%;
+    max-height:900px;
+    max-height: 900px;
     position: absolute;
     z-index: 2;
-    margin-top: 230px;
-    left: -250px;
-   
+    left: -200px;
+    bottom: -190px;
 }
 
 /* woman */
 .container4 .about3{
-    margin-block-end: 0;
-    width: 120%;
-    height: 110%;
+    width: 100%;
+    height: 100%;
+    max-height: 700px;
+    max-width: 700px;
     position: absolute;
     z-index: 3;
-    margin-top: 180px;
-    margin-right: 200px;
-    left: -350px;
+    /* left: -250px;
+    bottom: -220px; */
 }
 
-.container4 .about1{
-    margin-block-end: 0;
-    width: 120%;
+.container4 .about{
+    width: 1000px;
     height: 110%;
     position: absolute;
     z-index: 1;
-    margin-top: 180px;
-    margin-right: 200px;
-    left: -350px;
     animation-delay: 0.1s;
 }
 
@@ -369,7 +396,7 @@ body{
     align-content: center;
     align-items: center;
     height: 100vh;
-    width: auto;
+    width: 100%;
     background-color: rgb(250, 245, 239);
 }
 
@@ -441,58 +468,50 @@ body{
 
     /* Contact Details */
     .contact{
-        /* padding: 80px; */
         display: flex;
         flex-direction: column;
         align-items: center;
+        align-content: center;
         width: 100%;
         height: 100vh;
         flex-wrap: wrap;
         background-color: rgb(250, 245, 239);
-        /* flex: 1; */
         margin-top: 70px;
     }
 
     .main-picture{
         display: flex;
-        width: 100%;
+        flex-direction: column;
+        width: 400px;
         margin-top: 20px;
-        /* height: 100vh; */
         flex: 1.5;
-        /* background-color: rgb(233, 225, 214); */
-        /* margin-left: 50px;
-        margin-right: 50px; */
+        align-items: center;
+        align-content: center;
+        
+    }
+
+    .picture-container{
+        /* background-color: rgb(214, 207, 197); */
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        max-width: 400px;
+        height: 350px;
         align-items: center;
         align-content: center;
         position: relative;
         overflow: hidden;
+        padding: 20px;
     }
-
-    /* .picture-container{
-        background-color: rgb(201, 165, 115);
-        display: flex;
-        width: 30%;
-        height: 100%;
-        align-content: center;
-        align-items: center ;
-        position: relative;
-        overflow: hidden;
-        left: 35%;
-    } */
     
      /* diamond brown */
    .contact .contact1{
        width: 100%;
        max-width: 300px;
        height: auto;
-       
-       
        position: absolute;
        z-index: 3;
-       left: 42%;
-       right:58% ;
-       top: 5%;
-       bottom: 95%;
+       left: 70px;
    }
 
    /* woman */
@@ -500,46 +519,31 @@ body{
     width: 100%;
     max-width: 300px;
     height: auto;
-
     position: absolute;
     z-index: 6;
-    left: 38%;
-    right: 60%;
-    top: 5%;
-    bottom: 95%;
     }
 
     /*arrow right  */
-    .contact .contact3{
+    /* .contact .contact3{
         width: 100%;
         max-width: 40px;
         height: auto;
         position: absolute;
-        left: 62%;
-        right: 38%;
-        top: 38.5%;
-        bottom: 61.5%;
         animation-delay: 0.1s;
-    }
-
-    .rectangle{
-        width: 1500px;
-        height: 100px;
-        background-color: burlywood;
-    }
+        left: 340px;
+        top: 130px;
+    } */
 
     /* arrow left */
-    .contact .contact4{
+    /* .contact .contact4{
         width: 100%;
         max-width: 40px;
         height: auto;
         position: absolute;
         animation-delay: 0.1s;
-        left: 39.3%;
-        right: 60.7%;
-        top: 38.5%;
-        bottom: 61.5%;
-    }
+        left: 38px;
+        top: 130px;
+    } */
 
     /* slanted line brown top*/
     .contact .contact5{
@@ -547,10 +551,7 @@ body{
         max-width: 100px;
         height: auto;
         position: absolute;
-        top: 4.2%;
-        bottom:95.8% ;
-        left: 43%;
-        right:57% ;
+        left: 95px;
     }
 
     /* slanted line brown bottom */
@@ -559,10 +560,8 @@ body{
         max-width: 100px;
         height: auto;
         position: absolute;
-        left: 54%;
-        right: 46%;
-        bottom: 35%;
-        top: 65%;
+        left: 230px;
+        top: 215px;
     }
 
     .details{
@@ -572,7 +571,8 @@ body{
         margin: 40px;
         flex-wrap: wrap;
         flex: 1;
-        margin-top: 70px;
+        align-content: center;
+        align-items: center;
     }
 
     .icon{
